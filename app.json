@@ -1,0 +1,15 @@
+{
+  "expo": {
+    "name": "Social Media",
+    "icon": "./assets/images/icon.png",
+    "version": "0.0.1",
+    "slug": "All apps in one platform",
+    "sdkVersion": "33.0.0",
+    "android": {
+      "package": "com.example.Social_Media"
+    },
+    "ios": {
+      "bundleIdentifier": "com.example.Social"
+    }
+  }
+}

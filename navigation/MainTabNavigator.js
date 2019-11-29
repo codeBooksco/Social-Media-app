@@ -1,7 +1,7 @@
 import React from 'react';
 import { Platform } from 'react-native';
-import { createStackNavigator, createBottomTabNavigator } from 'react-navigation';
-import { Foundation } from '@expo/vector-icons';
+import { createStackNavigator, createBottomTabNavigator, createSwitchNavigator } from 'react-navigation';
+import { Foundation,MaterialCommunityIcons } from '@expo/vector-icons';
 
 import TabBarIcon from '../components/TabBarIcon';
 import FacebookScreen from '../screens/FacebookScreen';
@@ -10,6 +10,7 @@ import InstaScreen from '../screens/InstaScreen';
 import YoutubeScreen from '../screens/YoutubeScreen';
 import WebScreen from '../screens/WebScreen';
 import MerchandiseScreen from '../screens/Merchandise';
+import BuyScreen from '../screens/BuyScreen';
 
 const config = Platform.select({
   web: { headerMode: 'screen' },
@@ -107,13 +108,6 @@ const WebStack = createStackNavigator(
   config
 );
 
-const Merchandise = createStackNavigator(
-  {
-    Website: MerchandiseScreen,
-  },
-  { headerMode: 'none' },
-);
-
 WebStack.navigationOptions = {
   tabBarLabel: 'Web',
   tabBarIcon: ({ focused }) => (
@@ -127,12 +121,34 @@ WebStack.navigationOptions = {
   ),
 };
 
+const Merchandise = createStackNavigator(
+  {
+    buyy: BuyScreen,
+    Website: MerchandiseScreen,
+  },
+  { headerMode: 'none' },
+  // config
+);
+
+Merchandise.navigationOptions = {
+  tabBarLabel: 'Web',
+  tabBarIcon: ({ focused }) => (
+    <MaterialCommunityIcons focused={focused} 
+    size={32}
+    name={
+      Platform.OS === 'android'
+        ? `tshirt-crew${focused ? '' : '-outline'}`
+        : 'tshirt-crew'
+    } />
+  ),
+};
+
 const tabNavigator = createBottomTabNavigator({
-  Merchandise,
   FbStack,
   TwitterStack,
   InstaStack,
   YoutubeStack,
+  Merchandise,
   WebStack,
 });
 

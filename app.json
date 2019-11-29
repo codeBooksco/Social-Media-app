@@ -1,15 +1,30 @@
 {
   "expo": {
-    "name": "Social Media",
-    "icon": "./assets/images/icon.png",
-    "version": "0.0.1",
-    "slug": "All apps in one platform",
-    "sdkVersion": "33.0.0",
-    "android": {
-      "package": "com.example.Social_Media"
+    "name": "demo",
+    "slug": "project",
+    "privacy": "public",
+    "sdkVersion": "34.0.0",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
     },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
-      "bundleIdentifier": "com.example.Social"
+      "supportsTablet": true
     }
   }
 }

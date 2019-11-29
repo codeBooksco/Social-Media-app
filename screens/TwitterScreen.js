@@ -4,7 +4,7 @@ import { WebView } from 'react-native';
 export default function TwitterScreen() {
   return (
     <WebView
-        source={{uri: 'https://twitter.com/fahadmustafa26?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor'}}
+        source={{uri: 'https://twitter.com/junaidakram83?lang=en'}}
         style={{marginTop: 20}}
       />
   );

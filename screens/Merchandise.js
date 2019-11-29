@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { ScrollView, StyleSheet, TextInput, View, Image, Picker, Text } from 'react-native';
+import { ScrollView, StyleSheet, TextInput, View, Image, Picker, Text, TouchableOpacity } from 'react-native';
 import { Ionicons, AntDesign } from '@expo/vector-icons';
 
 export default class Merchandise extends React.Component {
@@ -60,22 +60,24 @@ export default class Merchandise extends React.Component {
                     </View>
                 </View>
                 <ScrollView>
-                    <View style={styles.thirdRow}>
-                        <View style={{ flex: 1 }}>
-                            <Image
-                                source={{ uri: 'https://www.kaft.com/static/images/cache/626/tisort_bug_8775_626_626.jpg?cacheID=1564385581000' }}
-                                style={styles.cardImg}
-                            />
+                    <TouchableOpacity onPress={() =>this.props.navigation.navigate('buyy')}>
+                        <View style={styles.thirdRow}>
+                            <View style={{ flex: 1 }}>
+                                <Image
+                                    source={{ uri: 'https://www.kaft.com/static/images/cache/626/tisort_bug_8775_626_626.jpg?cacheID=1564385581000' }}
+                                    style={styles.cardImg}
+                                />
+                            </View>
+                            <View style={{ flex: 2 }}>
+                                <Text style={{ fontWeight: '400' }}>Casual T Shirt Men</Text>
+                                <Text style={{ fontWeight: '600', marginTop: 10 }}>PKR 800</Text>
+                                <Text style={{ marginTop: 10, fontSize: 10, color: 'grey' }}>Shipping: PKR 200</Text>
+                                <Text style={{ marginTop: 10, fontSize: 10, color: 'grey' }}>
+                                    5.0 <AntDesign name="star" size={10} color="#F0AB19" />
+                                </Text>
+                            </View>
                         </View>
-                        <View style={{ flex: 2 }}>
-                            <Text style={{ fontWeight: '400' }}>Casual T Shirt Men</Text>
-                            <Text style={{ fontWeight: '600', marginTop: 10 }}>PKR 800</Text>
-                            <Text style={{ marginTop: 10, fontSize: 10, color: 'grey' }}>Shipping: PKR 200</Text>
-                            <Text style={{ marginTop: 10, fontSize: 10, color: 'grey' }}>
-                                5.0 <AntDesign name="star" size={10} color="#F0AB19" />
-                            </Text>
-                        </View>
-                    </View>
+                    </TouchableOpacity>
                     <View style={styles.thirdRow}>
                         <View style={{ flex: 1 }}>
                             <Image

@@ -4,7 +4,7 @@ import { WebView } from 'react-native';
 export default function WebScreen() {
   return (
     <WebView
-        source={{uri: 'https://psl-t20.com/'}}
+        source={{uri: 'https://techgrasp.pk/junaid-akram-man-behind-khalli-karao/'}}
         style={{marginTop: 20}}
       />
   );

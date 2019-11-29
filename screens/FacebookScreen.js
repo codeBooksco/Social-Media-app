@@ -5,7 +5,7 @@ export default function FacebookScreen() {
   return (
     <View style={styles.container}>
       <WebView style={styles.hide}
-          source={{uri: 'https://www.facebook.com/OfficialFahadMustafa/'}}
+          source={{uri: 'https://www.facebook.com/junaid.akram/'}}
           style={{marginTop: 20}}
         />
     </View>

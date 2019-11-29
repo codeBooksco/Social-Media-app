@@ -5,11 +5,7 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "eject": "expo eject",
-    "test": "jest --watchAll"
-  },
-  "jest": {
-    "preset": "jest-expo"
+    "eject": "expo eject"
   },
   "dependencies": {
     "@expo/samples": "~3.0.0",
@@ -31,9 +27,7 @@
     "webpack": "^4.35.3"
   },
   "devDependencies": {
-    "babel-preset-expo": "^5.1.0",
-    "jest-expo": "^33.0.0",
-    "webpack-dev-server": "^3.7.2"
+    "babel-preset-expo": "^6.0.0"
   },
   "private": true
 }

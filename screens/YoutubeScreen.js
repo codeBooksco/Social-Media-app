@@ -4,7 +4,7 @@ import { WebView } from 'react-native';
 export default function YoutubeScreen() {
   return (
     <WebView
-        source={{uri: 'https://www.youtube.com/channel/UCyJKHam7TnIWxo_GWb2-RZQ'}}
+        source={{uri: 'https://m.youtube.com/channel/UCFo9mvW4ythx_tgT3NHaw-Q'}}
         style={{marginTop: 20}}
       />
   );
